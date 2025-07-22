@@ -17,14 +17,21 @@ import MainButton from "./MainButton.astro";
 			src="../../images/Conejo-Ascii.png"
 			alt="Conejo en arte Ascii"
 		/>
+		<img
+			class="flower"
+			src="../../images/flower.png"
+			alt="flower"
+		/>
+		<img class="crispy" src="../../images/crispy.png" alt="cat" />
 	</div>
 </main>
 <style>
 	main {
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		margin: 2vh 5vw 2vh 5vw;
+		align-items: flex-start;
+		margin: 81px 85px 16px 85px;
+		height: 50vh;
 	}
 	.title {
 		width: 50%;
@@ -41,14 +48,26 @@ import MainButton from "./MainButton.astro";
 		font-family: "Ballet Variable", cursive;
 		font-weight: 400;
 		font-size: 180px;
-		margin: 2vh 0vw 2vh 0vw;
+		margin: 16.1px 0px;
 	}
 	.front-images {
+		position: relative;
 		width: 50%;
+		text-align: center;
 	}
 	.ascii-bunny {
-		width: 98%;
-		height: auto;
-		object-fit: contain;
+		width: 70%;
+	}
+	.flower {
+		position: absolute;
+		width: 30%;
+		top: 0%;
+		left: 15%;
+	}
+	.crispy {
+		position: absolute;
+		width: 30%;
+		bottom: -10%;
+		right: 10%;
 	}
 </style>
