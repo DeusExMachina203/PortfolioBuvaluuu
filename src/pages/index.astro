@@ -1,5 +1,9 @@
 ---
-
+import "../styles/global.css";
+import "@fontsource-variable/roboto";
+import "@fontsource-variable/ballet";
+import MainContent from "../components/MainContent.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
@@ -11,6 +15,10 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<BaseLayout>
+			<MainContent />
+		</BaseLayout>
 	</body>
 </html>
+
+<style></style>

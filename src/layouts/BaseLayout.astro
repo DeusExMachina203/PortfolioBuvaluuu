@@ -1,0 +1,9 @@
+---
+import MainHeader from "../components/MainHeader.astro";
+
+const sections = ["HOME", "WORK", "ABOUT ME", "CONTACT"];
+---
+
+<MainHeader sections={sections} />
+<slot />
+<footer></footer>

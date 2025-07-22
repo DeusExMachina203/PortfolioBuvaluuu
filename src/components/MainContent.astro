@@ -1,0 +1,54 @@
+---
+import MainButton from "./MainButton.astro";
+---
+
+<main>
+	<div class="title">
+		<h3>WELCOME TO MY</h3>
+		<h1>Portfolio</h1>
+		<div>
+			<MainButton text="ABOUT ME" />
+			<MainButton text="MY WORK" />
+		</div>
+	</div>
+	<div class="front-images">
+		<img
+			class="ascii-bunny"
+			src="../../images/Conejo-Ascii.png"
+			alt="Conejo en arte Ascii"
+		/>
+	</div>
+</main>
+<style>
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2vh 5vw 2vh 5vw;
+	}
+	.title {
+		width: 50%;
+		text-align: center;
+	}
+	.title h3 {
+		font-weight: 400;
+		font-style: normal;
+		size: 26px;
+		text-align: left;
+		padding-left: 4vw;
+	}
+	.title h1 {
+		font-family: "Ballet Variable", cursive;
+		font-weight: 400;
+		font-size: 180px;
+		margin: 2vh 0vw 2vh 0vw;
+	}
+	.front-images {
+		width: 50%;
+	}
+	.ascii-bunny {
+		width: 98%;
+		height: auto;
+		object-fit: contain;
+	}
+</style>

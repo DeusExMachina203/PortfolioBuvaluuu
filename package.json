@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.1"
+    "@fontsource-variable/ballet": "^5.2.6",
+    "@fontsource-variable/roboto": "^5.2.6",
+    "astro": "^5.12.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
