@@ -1,0 +1,44 @@
+---
+import "../../styles/global.css";
+import "@fontsource-variable/roboto";
+import "@fontsource-variable/ballet";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WorkPieceLink from "../../components/WorkPieceLink.astro";
+---
+
+<BaseLayout>
+	<div class="branding-section">
+		<h2>Branding</h2>
+		<div class="links">
+			<WorkPieceLink
+				shape="rectangle"
+				workPieceName="YOM"
+				workPieceDesc="This is the stuff for the brand YOM"
+				imgSrc="../../../images/bannerYom.png"
+				imgAlt="Banner for Yom brand"
+			/>
+			<WorkPieceLink
+				shape="rectangle"
+				workPieceName="YOM"
+				workPieceDesc="This is the stuff for the brand YOM"
+				imgSrc="../../../images/bannerYom.png"
+				imgAlt="Banner for Yom brand"
+			/>
+		</div>
+	</div>
+	<div class="ilustrations-section"></div>
+	<div class="posters-section"></div>
+</BaseLayout>
+<style>
+	h2 {
+		font-family: "Ballet Variable", cursive;
+		font-weight: 400;
+		font-size: 160px;
+		margin: 100px 0px 0px 7%;
+	}
+	.links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+</style>

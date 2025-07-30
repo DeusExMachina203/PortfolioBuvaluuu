@@ -1,0 +1,43 @@
+---
+const { imgSrc, imgAlt, workPieceName, workPieceDesc, shape } = Astro.props;
+const isSquare = shape === "square" ? true : false;
+const isRectangle = shape === "rectangle" ? true : false;
+---
+
+<div class:list={[{ square: isSquare }, { rectangle: isRectangle }]}>
+	<img src={imgSrc} alt={imgAlt} />
+	<div class="subtitles">
+		<h3>{workPieceName}</h3>
+		<h4>{workPieceDesc}</h4>
+	</div>
+</div>
+
+<style>
+	img {
+		width: 100%;
+		object-fit: cover;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 34px;
+	}
+	.subtitles h3 {
+		font-weight: 700;
+		font-style: bold;
+		font-size: 28px;
+		margin: 8px 0px 0px 8px;
+	}
+	.subtitles h4 {
+		font-weight: 400;
+		font-size: 18px;
+		margin: 9px 0px 8px 8px;
+	}
+	.square {
+		width: 401px;
+		margin: 30px;
+	}
+
+	.rectangle {
+		width: 890px;
+		margin: 15px;
+	}
+</style>

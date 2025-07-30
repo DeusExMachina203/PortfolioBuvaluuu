@@ -1,9 +1,10 @@
 ---
 import MainHeader from "../components/MainHeader.astro";
+import Footer from "../components/Footer.astro";
 
 const sections = ["HOME", "WORK", "ABOUT ME", "CONTACT"];
 ---
 
 <MainHeader sections={sections} />
 <slot />
-<footer></footer>
+<Footer />
