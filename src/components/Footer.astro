@@ -1,5 +1,8 @@
 ---
-
+import { Image } from "astro:assets";
+import instagram from "../../images/instagram.png";
+import behance from "../../images/behance.png";
+import linkedin from "../../images/linkedin.png";
 ---
 
 <footer>
@@ -10,24 +13,24 @@
 			<ul>
 				<li class="social-media-link">
 					<a href=""
-						><img
-							src="../../images/linkedin.png"
+						><Image
+							src={linkedin}
 							alt="linkedin logo"
 						/></a
 					>
 				</li>
 				<li class="social-media-link">
 					<a href=""
-						><img
-							src="../../images/behance.png"
+						><Image
+							src={behance}
 							alt="behance logo"
 						/></a
 					>
 				</li>
 				<li class="social-media-link">
 					<a href=""
-						><img
-							src="../../images/instagram.png"
+						><Image
+							src={instagram}
 							alt="instagram logo"
 						/></a
 					>

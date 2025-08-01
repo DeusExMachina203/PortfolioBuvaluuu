@@ -1,11 +1,13 @@
 ---
+import { Image } from "astro:assets";
+
 const { imgSrc, imgAlt, workPieceName, workPieceDesc, shape } = Astro.props;
 const isSquare = shape === "square" ? true : false;
 const isRectangle = shape === "rectangle" ? true : false;
 ---
 
 <div class:list={[{ square: isSquare }, { rectangle: isRectangle }]}>
-	<img src={imgSrc} alt={imgAlt} />
+	<Image class="image" src={imgSrc} alt={imgAlt} />
 	<div class="subtitles">
 		<h3>{workPieceName}</h3>
 		<h4>{workPieceDesc}</h4>
@@ -13,7 +15,7 @@ const isRectangle = shape === "rectangle" ? true : false;
 </div>
 
 <style>
-	img {
+	.image {
 		width: 100%;
 		object-fit: cover;
 		border-style: solid;

@@ -2,6 +2,9 @@
 import "../../styles/global.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import WorkPieceLink from "../../components/WorkPieceLink.astro";
+import arrowNext from "../../../images/arrow-next-circle-fill.png";
+import asciiCat from "../../../images/gato-ascii.png";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout>
@@ -50,15 +53,17 @@ import WorkPieceLink from "../../components/WorkPieceLink.astro";
 			<div class="posters-subtext">
 				<h3>AND FLYERS</h3>
 				<button
-					><img
-						src="../../../images/arrow-next-circle-fill.png"
-						alt=""
+					><Image
+						class="poster-arrow"
+						src={arrowNext}
+						alt="next"
 					/>
 				</button>
 			</div>
 		</div>
-		<img
-			src="../../../images/gato-ascii.png"
+		<Image
+			class="poster-image"
+			src={asciiCat}
 			alt="cat in ascii art"
 		/>
 	</div>
@@ -89,11 +94,16 @@ import WorkPieceLink from "../../components/WorkPieceLink.astro";
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		align-items: center;
 		margin-top: 70px;
 	}
-	.posters-section img {
+	.poster-arrow {
 		margin: 20px;
 		object-fit: contain;
+	}
+	.poster-image {
+		align-self: flex-end;
+		margin-left: 70px;
 	}
 	.posters-section h2 {
 		height: 200px;

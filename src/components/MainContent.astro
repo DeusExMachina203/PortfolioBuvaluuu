@@ -1,5 +1,9 @@
 ---
 import MainButton from "./MainButton.astro";
+import Image from "astro/components/Image.astro";
+import asciiBunny from "../../images/Conejo-Ascii.png";
+import flower from "../../images/flower.png";
+import crispy from "../../images/crispy.png";
 ---
 
 <main>
@@ -12,17 +16,13 @@ import MainButton from "./MainButton.astro";
 		</div>
 	</div>
 	<div class="front-images">
-		<img
+		<Image
 			class="ascii-bunny"
-			src="../../images/Conejo-Ascii.png"
+			src={asciiBunny}
 			alt="Conejo en arte Ascii"
 		/>
-		<img
-			class="flower"
-			src="../../images/flower.png"
-			alt="flower"
-		/>
-		<img class="crispy" src="../../images/crispy.png" alt="cat" />
+		<Image class="flower" src={flower} alt="flower" />
+		<Image class="crispy" src={crispy} alt="cat" />
 	</div>
 </main>
 <style>
@@ -61,12 +61,14 @@ import MainButton from "./MainButton.astro";
 	.flower {
 		position: absolute;
 		width: 30%;
+		height: auto;
 		top: 0%;
 		left: 15%;
 	}
 	.crispy {
 		position: absolute;
 		width: 30%;
+		height: auto;
 		bottom: -10%;
 		right: 10%;
 	}

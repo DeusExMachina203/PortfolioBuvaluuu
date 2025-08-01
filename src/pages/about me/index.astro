@@ -1,8 +1,19 @@
 ---
 import "../../styles/global.css";
+import Image from "astro/components/Image.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import MainButton from "../../components/MainButton.astro";
 import ToolDisplayer from "../../components/ToolDisplayer.astro";
+import asciiPortrait from "../../../images/me-ascii.png";
+import liliAnalog from "../../../images/lili-analog.png";
+import buvaluuuAnalog from "../../../images/buvaluuu-analog.png";
+import plantsAnalog from "../../../images/plants-analog.png";
+import afterEffectsLogo from "../../../images/after-effects-logo.png";
+import canvaLogo from "../../../images/canva-logo.png";
+import figmaLogo from "../../../images/figma-logo.png";
+import notionLogo from "../../../images/notion-logo.png";
+import photoshopLogo from "../../../images/photoshop-logo.png";
+import illustratorLogo from "../../../images/ilustrator-logo.png";
 ---
 
 <BaseLayout>
@@ -31,24 +42,24 @@ import ToolDisplayer from "../../components/ToolDisplayer.astro";
 			</div>
 		</div>
 		<div class="about-me-image">
-			<img
+			<Image
 				class="ascii-portrait"
-				src="../../../images/me-ascii.png"
+				src={asciiPortrait}
 				alt="ascii portrait of buvaluuu"
 			/>
-			<img
+			<Image
 				class="lili-analog"
-				src="../../../images/lili-analog.png"
+				src={liliAnalog}
 				alt="analog photo of a flower"
 			/>
-			<img
+			<Image
 				class="buvaluuu-analog"
-				src="../../../images/buvaluuu-analog.png"
+				src={buvaluuuAnalog}
 				alt="buvaluuu analog protrait"
 			/>
-			<img
+			<Image
 				class="plants-analog"
-				src="../../../images/plants-analog.png"
+				src={plantsAnalog}
 				alt="analog photo of a plant"
 			/>
 		</div>
@@ -57,42 +68,48 @@ import ToolDisplayer from "../../components/ToolDisplayer.astro";
 		<h2>Tools that help me daily</h2>
 		<div class="tools">
 			<ToolDisplayer
-				toolImagePath="../../../images/ilustrator-logo.png"
-				toolName="Adobe Ilustrator"
+				toolImagePath={illustratorLogo}
+				toolName="Adobe Illustrator"
 				toolTags={["Design", "prototiping"]}
+				imageAlt="Illustrator logo"
 			/>
 			<ToolDisplayer
-				toolImagePath="../../../images/photoshop-logo.png"
+				toolImagePath={photoshopLogo}
 				toolName="Adobe Photoshop"
 				toolTags={[
 					"Design",
 					"phoot editing",
 					"ilustration",
 				]}
+				imageAlt="Photoshop Logo"
 			/>
 			<ToolDisplayer
-				toolImagePath="../../../images/notion-logo.png"
+				toolImagePath={notionLogo}
 				toolName="Notion"
 				toolTags={["Organization", "documentation"]}
+				imageAlt="Notion Logo"
 			/>
 			<ToolDisplayer
-				toolImagePath="../../../images/figma-logo.png"
+				toolImagePath={figmaLogo}
 				toolName="Figma"
 				toolTags={[
 					"Design",
 					"prototiping",
 					"brainstorming",
 				]}
+				imageAlt="Figma Logo"
 			/>
 			<ToolDisplayer
-				toolImagePath="../../../images/canva-logo.png"
+				toolImagePath={canvaLogo}
 				toolName="Canva"
 				toolTags={["Design", "animation"]}
+				imageAlt="Canva Logo"
 			/>
 			<ToolDisplayer
-				toolImagePath="../../../images/after-effects-logo.png"
+				toolImagePath={afterEffectsLogo}
 				toolName="After Effects"
 				toolTags={["Animation"]}
+				imageAlt="After Effects Logo"
 			/>
 		</div>
 	</section>
@@ -125,6 +142,7 @@ import ToolDisplayer from "../../components/ToolDisplayer.astro";
 		}
 		.ascii-portrait {
 			width: 504px;
+			height: auto;
 		}
 		.about-me-image {
 			position: relative;
@@ -132,6 +150,7 @@ import ToolDisplayer from "../../components/ToolDisplayer.astro";
 			width: 50%;
 		}
 		.lili-analog {
+			height: auto;
 			position: absolute;
 			right: 160px;
 			top: -100px;
@@ -139,6 +158,7 @@ import ToolDisplayer from "../../components/ToolDisplayer.astro";
 			object-fit: cover;
 		}
 		.buvaluuu-analog {
+			height: auto;
 			position: absolute;
 			left: 90px;
 			top: -30px;
@@ -146,6 +166,7 @@ import ToolDisplayer from "../../components/ToolDisplayer.astro";
 			object-fit: cover;
 		}
 		.plants-analog {
+			height: auto;
 			position: absolute;
 			left: 170px;
 			bottom: -100px;
