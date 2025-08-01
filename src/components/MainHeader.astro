@@ -24,7 +24,7 @@ const { sections } = Astro.props;
 							: `./${section.toLowerCase()}`
 					}
 				>
-					<li>{section}</li>
+					<li class="section">{section}</li>
 				</a>
 			))
 		}
@@ -54,6 +54,13 @@ const { sections } = Astro.props;
 	.sections a {
 		text-decoration: none;
 		color: inherit;
+	}
+	.section {
+		border-bottom: transparent solid 2px;
+		transition: 0.5s;
+	}
+	.section:hover {
+		border-bottom: black solid 2px;
 	}
 	.main-logo {
 		width: 50px;

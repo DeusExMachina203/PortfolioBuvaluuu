@@ -15,8 +15,16 @@ const { text } = Astro.props;
 		border-radius: 34px;
 		background: linear-gradient(
 			90deg,
-			#ffffff 0%,
+			#000 0%,
+			#ffffff 50%,
 			rgba(255, 255, 255, 0) 100%
 		);
+		background-size: 200%;
+		background-position: right;
+		transition: 0.5s;
+	}
+	button:hover {
+		background-position: left;
+		color: white;
 	}
 </style>
