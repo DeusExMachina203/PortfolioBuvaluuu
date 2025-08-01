@@ -20,8 +20,8 @@ const { sections } = Astro.props;
 				<a
 					href={
 						section === "HOME"
-							? "./"
-							: `./${section.toLowerCase()}`
+							? "/"
+							: `/${section.toLowerCase()}`
 					}
 				>
 					<li class="section">{section}</li>
