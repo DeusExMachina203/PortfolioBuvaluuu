@@ -26,19 +26,99 @@ import WorkPieceLink from "../../components/WorkPieceLink.astro";
 			/>
 		</div>
 	</div>
-	<div class="ilustrations-section"></div>
-	<div class="posters-section"></div>
+	<div class="ilustrations-section">
+		<h2>Ilustrations</h2>
+		<h3>AND ARTISTIC ANIMATION</h3>
+		<div class="ilustrations">
+			<WorkPieceLink
+				shape="square"
+				workPieceName="ILUSTRATION"
+				workPieceDesc="This is the stuff for the brand YOM"
+				imgSrc="../../../images/ilustrations-presentation.png"
+				imgAlt="Banner for Yom brand"
+			/>
+			<WorkPieceLink
+				shape="square"
+				workPieceName="ILUSTRATION"
+				workPieceDesc="This is the stuff for the brand YOM"
+				imgSrc="../../../images/ilustrations-presentation.png"
+				imgAlt="Banner for Yom brand"
+			/>
+		</div>
+	</div>
+	<div class="posters-section">
+		<div>
+			<h2>Posters</h2>
+			<div class="posters-subtext">
+				<h3>AND FLYERS</h3>
+				<button
+					><img
+						src="../../../images/arrow-next-circle-fill.png"
+						alt=""
+					/>
+				</button>
+			</div>
+		</div>
+		<img
+			src="../../../images/gato-ascii.png"
+			alt="cat in ascii art"
+		/>
+	</div>
 </BaseLayout>
 <style>
 	h2 {
 		font-family: "Ballet Variable", cursive;
 		font-weight: 400;
 		font-size: 160px;
-		margin: 100px 0px 0px 7%;
+		margin: 80px 0px 10px 7%;
+		padding: 10px;
 	}
 	.links {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	.ilustrations-section h3 {
+		margin: 10px 0px 15px 7%;
+	}
+	.ilustrations {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.posters-section {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 70px;
+	}
+	.posters-section img {
+		margin: 20px;
+		object-fit: contain;
+	}
+	.posters-section h2 {
+		height: 200px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+	.posters-subtext {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 500px;
+		margin: 0px 0px 0px 8%;
+		font-weight: 700;
+		font-style: Bold;
+		font-size: 28px;
+	}
+	.posters-subtext button {
+		background: none;
+		color: inherit;
+		padding: 0;
+		border: none;
+	}
+	.posters-subtext h3 {
+		padding-top: 20px;
 	}
 </style>

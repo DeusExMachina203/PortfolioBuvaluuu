@@ -1,5 +1,10 @@
+* {
+	box-sizing: border-box;
+}
+
 html{
-	font-family: 'Roboto Variable', sans-serif;
+	font-family: 'Roboto Variable';
 	background-image: url('../../images/background_landing.png');
 	background-size: cover;
+	box-sizing: border-box;
 }

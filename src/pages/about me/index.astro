@@ -1,0 +1,176 @@
+---
+import "../../styles/global.css";
+import "@fontsource-variable/roboto";
+import "@fontsource-variable/ballet";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MainButton from "../../components/MainButton.astro";
+import ToolDisplayer from "../../components/ToolDisplayer.astro";
+---
+
+<BaseLayout>
+	<main>
+		<div class="about-me-info">
+			<h1>About me</h1>
+			<h2>HI! It's me, Valeria</h2>
+			<p>
+				I'm a Peruvian designer and illustrator, deeply
+				curious about art, graphic concepts, and the
+				ways they manifest in our everyday lives.
+				Drawing has always been a part of me, and for
+				the past five years I’ve been learning and
+				working across different areas of design.  I'm
+				passionate about bringing a bit of magic to my
+				clients' ideas and firmly believe in the power
+				of good design as a tool for social impact.
+			</p>
+			<p>
+				Beyond design, I nurture my creativity through
+				drawing, stay balanced by working out, and find
+				calm in caring for my cats and plants.
+			</p>
+			<div class="button-site">
+				<MainButton text="DOWNLOAD RESUME" />
+			</div>
+		</div>
+		<div class="about-me-image">
+			<img
+				class="ascii-portrait"
+				src="../../../images/me-ascii.png"
+				alt="ascii portrait of buvaluuu"
+			/>
+			<img
+				class="lili-analog"
+				src="../../../images/lili-analog.png"
+				alt="analog photo of a flower"
+			/>
+			<img
+				class="buvaluuu-analog"
+				src="../../../images/buvaluuu-analog.png"
+				alt="buvaluuu analog protrait"
+			/>
+			<img
+				class="plants-analog"
+				src="../../../images/plants-analog.png"
+				alt="analog photo of a plant"
+			/>
+		</div>
+	</main>
+	<section class="daily-tools">
+		<h2>Tools that help me daily</h2>
+		<div class="tools">
+			<ToolDisplayer
+				toolImagePath="../../../images/ilustrator-logo.png"
+				toolName="Adobe Ilustrator"
+				toolTags={["Design", "prototiping"]}
+			/>
+			<ToolDisplayer
+				toolImagePath="../../../images/photoshop-logo.png"
+				toolName="Adobe Photoshop"
+				toolTags={[
+					"Design",
+					"phoot editing",
+					"ilustration",
+				]}
+			/>
+			<ToolDisplayer
+				toolImagePath="../../../images/notion-logo.png"
+				toolName="Notion"
+				toolTags={["Organization", "documentation"]}
+			/>
+			<ToolDisplayer
+				toolImagePath="../../../images/figma-logo.png"
+				toolName="Figma"
+				toolTags={[
+					"Design",
+					"prototiping",
+					"brainstorming",
+				]}
+			/>
+			<ToolDisplayer
+				toolImagePath="../../../images/canva-logo.png"
+				toolName="Canva"
+				toolTags={["Design", "animation"]}
+			/>
+			<ToolDisplayer
+				toolImagePath="../../../images/after-effects-logo.png"
+				toolName="After Effects"
+				toolTags={["Animation"]}
+			/>
+		</div>
+	</section>
+
+	<style>
+		main {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			padding: 0px 10%;
+		}
+		h1 {
+			height: 250px;
+			font-family: "Ballet Variable", cursive;
+			font-weight: 400;
+			font-size: 140px;
+			margin: 0;
+		}
+		.about-me-info {
+			width: 50%;
+			font-weight: 400;
+			font-style: normal;
+			padding: 0 90px;
+			display: flex;
+			flex-direction: column;
+		}
+		.about-me-info h2 {
+			font-size: 44px;
+		}
+		.ascii-portrait {
+			width: 504px;
+		}
+		.about-me-image {
+			position: relative;
+			text-align: center;
+			width: 50%;
+		}
+		.lili-analog {
+			position: absolute;
+			right: 160px;
+			top: -100px;
+			width: 142px;
+			object-fit: cover;
+		}
+		.buvaluuu-analog {
+			position: absolute;
+			left: 90px;
+			top: -30px;
+			width: 215px;
+			object-fit: cover;
+		}
+		.plants-analog {
+			position: absolute;
+			left: 170px;
+			bottom: -100px;
+			width: 210px;
+			object-fit: cover;
+		}
+		.button-site {
+			margin: 50px 0;
+		}
+		.daily-tools {
+			width:;
+			padding: 0 10%;
+		}
+		.daily-tools h2 {
+			font-size: 44px;
+			padding: 0 90px;
+		}
+		.tools {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			row-gap: 50px;
+		}
+	</style>
+</BaseLayout>

@@ -2,6 +2,12 @@
 const { sections } = Astro.props;
 ---
 
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Astro</title>
+</head>
 <header>
 	<img
 		class="main-logo"
@@ -9,7 +15,19 @@ const { sections } = Astro.props;
 		alt="Logo de la marca Buvaluuu"
 	/>
 	<ul class="sections">
-		{sections.map((section: string) => <li>{section}</li>)}
+		{
+			sections.map((section: string) => (
+				<a
+					href={
+						section === "HOME"
+							? "./"
+							: `./${section.toLowerCase()}`
+					}
+				>
+					<li>{section}</li>
+				</a>
+			))
+		}
 	</ul>
 </header>
 
@@ -21,7 +39,7 @@ const { sections } = Astro.props;
 		border-bottom-style: solid;
 		border-bottom-color: black;
 		border-bottom-width: 2px;
-		padding: 3vh 3vw 2vh 20px;
+		padding: 4em 3vw 27px 20px;
 		margin: 3vh 3vw 2vh 3vw;
 		height: 3vh;
 	}
@@ -31,10 +49,16 @@ const { sections } = Astro.props;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		margin-bottom: 40px;
+	}
+	.sections a {
+		text-decoration: none;
+		color: inherit;
 	}
 	.main-logo {
 		width: 50px;
 		height: 50px;
-		padding-left: 1vw;
+		margin-left: 10px;
+		margin-bottom: 30px;
 	}
 </style>

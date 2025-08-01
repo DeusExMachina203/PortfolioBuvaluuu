@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+const { toolName, toolImagePath, imageAlt, toolTags } = Astro.props;
+---
+
+<div class="displayer">
+	<img src={toolImagePath} alt={imageAlt} />
+	<div class="title">
+		<h4>{toolName}</h4>
+		<h5>
+			{
+				toolTags.map((tag, index) =>
+					index === toolTags.length - 1
+						? tag
+						: tag + ", ",
+				)
+			}
+		</h5>
+	</div>
+</div>
+<style>
+	img {
+		width: 58px;
+		height: 58px;
+		object-fit: cover;
+		text-align: center;
+		margin: 0 15px;
+	}
+	.displayer {
+		width: 580px;
+		padding: 10px;
+		margin: 0 20px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		border-style: none none solid none;
+		border-color: black;
+		border-left-width: 1px;
+	}
+	.title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.title h4 {
+		margin: 6px 0;
+		font-weight: 700;
+		font-size: 26px;
+	}
+	.title h5 {
+		margin: 6px 0;
+		font-weight: 400;
+		font-size: 16px;
+	}
+</style>
