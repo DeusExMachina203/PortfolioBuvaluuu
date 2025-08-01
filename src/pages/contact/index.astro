@@ -1,0 +1,95 @@
+---
+import "../../styles/global.css";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MainButton from "../../components/MainButton.astro";
+---
+
+<BaseLayout>
+	<main>
+		<h1>let's talk!</h1>
+		<p class="call-to-action">
+			Got a great idea in mind? Message me and let's bring
+			your project to life.
+		</p>
+		<span class="contact"
+			>Contact: valeriadominguez713@gmail.com</span
+		>
+		<MainButton text="CONTACT ME" />
+		<form action="">
+			<label for="full-name"></label>
+			<input
+				type="text"
+				id="full-name"
+				name="full-name"
+				placeholder="FIRST AND LAST NAME"
+			/>
+			<label for="full-name"></label>
+			<input
+				type="text"
+				id="email"
+				name="email"
+				placeholder="EMAIL"
+			/>
+			<label for="message"></label>
+			<textarea
+				id="message"
+				name="message"
+				placeholder="MESSAGE"></textarea>
+		</form>
+	</main>
+	<style>
+		h1 {
+			font-family: "Ballet Variable", cursive;
+			font-weight: 400;
+			font-size: 180px;
+			height: 263px;
+			margin: 16px 0px;
+		}
+		main {
+			border: solid 2px black;
+			border-radius: 66px;
+			padding: 0 10% 100px 10%;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			row-gap: 15px;
+			flex-direction: column;
+			margin: 100px 20%;
+		}
+		.call-to-action {
+			padding: 0 5%;
+			font-weight: 400;
+			font-size: 24px;
+		}
+		.contact {
+			margin-bottom: 20px;
+			font-weight: 600;
+			font-size: 24px;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			width: 100%;
+		}
+		input {
+			height: 57px;
+			padding: 0 50px;
+			border-radius: 28px;
+			font-weight: 500;
+			font-size: 20px;
+		}
+
+		textarea {
+			padding: 17px 50px;
+			border-radius: 28px;
+			height: 300px;
+			font-weight: 500;
+			font-size: 20px;
+			overflow-y: auto;
+			resize: none;
+			min-height: 2em;
+			width: 100%;
+		}
+	</style>
+</BaseLayout>
